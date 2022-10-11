@@ -1,0 +1,35 @@
+{
+  "name": "web-scrapping-infobae-currency",
+  "version": "1.0.0",
+  "description": "web scrapping script to get infobae currency rates",
+  "main": "currency_rates.js",
+  "type": "commonjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dgayet/web-scrapping-infobae-currency.git"
+  },
+  "keywords": [
+    "infobae",
+    "currency",
+    "rates",
+    "web-scrapping"
+  ],
+  "author": "Denise Gayet \\ dgayet@fi.uba.ar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dgayet/web-scrapping-infobae-currency/issues"
+  },
+  "homepage": "https://github.com/dgayet/web-scrapping-infobae-currency#readme",
+  "devDependencies": {
+    "@types/axios": "^0.14.0",
+    "@types/cheerio": "^0.22.31"
+  },
+  "dependencies": {
+    "@types/node": "^18.8.4",
+    "axios": "^1.1.0",
+    "cheerio": "^1.0.0-rc.12"
+  }
+}

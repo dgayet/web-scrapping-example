@@ -1,0 +1,15 @@
+# npm generated files #
+node_modules
+
+# config jsons
+config.json
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
