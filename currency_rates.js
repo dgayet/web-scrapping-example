@@ -64,6 +64,7 @@ var getRates = function () { return __awaiter(void 0, void 0, void 0, function (
                         value: value
                     });
                 });
+                currValues_1 = currValues_1.slice(0, -2);
                 console.log(currValues_1);
                 return [2 /*return*/, currValues_1];
             case 3:
@@ -87,13 +88,13 @@ var convertCurrencies = function (value, rates_promsie, direct) { return __await
                     var conversion;
                     if (direct) {
                         conversion = {
-                            currency: 'Conversión al' + curr.currency,
+                            currency: 'Conversión al ' + curr.currency,
                             value: curr.value * value
                         };
                     }
                     else {
                         conversion = {
-                            currency: 'Conversión al' + curr.currency,
+                            currency: 'Conversión al ' + curr.currency,
                             value: value / curr.value
                         };
                     }

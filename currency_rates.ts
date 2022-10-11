@@ -5,6 +5,8 @@ import * as cheerio from 'cheerio';
 export interface Currency {
     currency: string;
     value: number;
+
+    // method to print
 }
 
 
@@ -17,7 +19,7 @@ const getRates: Function = async (): Promise<void | Currency[]> => {
         const html = response.data;
         const $ = cheerio.load(html);
         const table = $('.excbar > a');
-        const currValues: Currency[] = [];
+        let currValues: Currency[] = [];
 
         table.each((i, elem) => {
             const currency: string = $(elem).find('.exc-tit').text();
@@ -28,6 +30,7 @@ const getRates: Function = async (): Promise<void | Currency[]> => {
                 value
             });
         });
+        currValues = currValues.slice(0,-2);
         console.log(currValues);
         return currValues;
     } catch (message_1) {
@@ -43,12 +46,12 @@ const convertCurrencies: Function = async (value: number, rates_promsie: Promise
         let conversion: Currency;
         if (direct) {
             conversion = {
-                currency: 'Conversión al' + curr.currency,
+                currency: 'Conversión al ' + curr.currency,
                 value: curr.value*value,
             }
         } else {
             conversion = {
-                currency: 'Conversión al' + curr.currency,
+                currency: 'Conversión al ' + curr.currency,
                 value: value/curr.value,
             }
         }
